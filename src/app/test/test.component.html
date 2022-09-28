@@ -1,0 +1,70 @@
+<div class="container">
+    <div class="card justify-content-between headeing-div">
+        <div class="row p-2">
+        <div class="col-4"><i class='fas fa-edit fa-3x'></i></div>
+        <div class="col-4 text-center">
+            <h1>Angular Test</h1>
+        </div>
+        <div class="col-4 text-right">
+            <div class="">
+                <h4>{{name}}</h4>
+                <span>{{email}}</span>
+            </div>
+        </div>
+        </div>
+        <div class="row">
+            <div class="col-12 pl-4 pr-4">
+                <hr>
+            </div>
+        </div>
+        <div class="row text-center">
+            <div class="col-4">
+                <h5><i class='fas fa-retweet'></i></h5>
+            </div>
+            <div class="col-4">
+                <h5>Question <span class="text-primary">{{currentQuestion+1}}</span> of <span class="text-primary">{{questionArray.length}}</span></h5>
+            </div>
+            <div class="col-4">
+                <h3><span class="text-danger">{{counter}}</span> sec <i class='fas fa-clock'></i></h3>
+            </div>
+        </div>
+    </div>
+    <div class="card mt-1 p-2 pl-4 bg-secondary text-white">
+        <div class="row">
+            <div class="col-12">
+                <h4>{{questionArray[currentQuestion].questionLabel}}</h4>
+            </div>
+        </div>
+    </div>
+    <div class="card mt-2 p-3 gray-border gray-back optionValue">
+        <div class="row">
+            <div class="col-12 optionDiv">
+                <div class="card option gray-border font-weight-bold" *ngFor="let option of questionArray[currentQuestion].options"
+                    (click)="onSelect(questionArray[currentQuestion],questionArray[currentQuestion].options,option)"
+                    [ngClass]="option.isSelected?'bg-success text-white':''">
+                    {{option.label}}
+                </div>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-4">
+                <h2 class="pl-3" [ngClass]="currentQuestion == 0?'no-pointer icon-disable':'pointer text-primary'"
+                    (click)="prevQuestion()"><i class='fas fa-arrow-left'></i></h2>
+            </div>
+            <div class="col-4 text-center">
+                <h5 class="pt-2 pointer"><i class='fas fa-recycle'></i>Revisit Question</h5>
+            </div>
+            <div class="col-4 text-right">
+                <h2 class="pr-3" [ngClass]="questionArray.length-1 == currentQuestion?'no-pointer icon-disable':'pointer text-primary'"
+                    (click)="nextQuestion()"><i class='fas fa-arrow-right'></i></h2>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 text-center mt-2">
+            <div class="questionDiv" *ngFor="let q of questionArray; let i=index" [ngClass]="q.isAttempted?'attempted text-white': 'left'">
+              {{i+1}}  
+            </div>
+        </div>
+    </div>
+</div>

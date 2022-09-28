@@ -1,0 +1,28 @@
+
+<div class="row justify-content mt-5" style="margin-left: 25%;">
+    <div class="col-md-8 card">
+        <div class="row bg-warning">
+            <h2 class="col mt-3 text-center font-weight-bold">Sorry!!!</h2>
+        </div>
+        <hr>
+        <form>
+            <div class="form-group">
+                <h4 class="mt-3">You have completed your Test</h4>
+                <ul class="mt-5">
+                    <li>Total Question: 10</li>
+                    <li class="mt-2">Attempted Question: 10</li>
+                    <li class="mt-2">Correct Question: {{value}}</li>
+                </ul>
+                <p class="font-weight-bold" style="margin-top: 50px;"><strong class="bg-warning">NB:</strong> Must be selected correct answer at least 5 or more!</p>
+
+                <button type="button" class="btn btn-info" style="float: right;" (click)="valueClear()">Go Home</button>
+            </div>
+            
+        </form>
+
+        <div class="alert alert-warning mt-5" role="alert">
+            <h2 class="alert-heading text-center text-secondary font-weight-bold">Your Achivement!!</h2>
+            <h3 class="font-weight-bold">Result: <span style="font-family: cursive; color: rgb(148, 49, 38);">Failed.</span></h3>
+        </div>
+    </div>
+</div>

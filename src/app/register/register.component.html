@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xl-5 m-auto">
+            <div class="card">
+                <div class="text-center">
+                    <h1>Sign Up</h1>
+                    <h6>Register Yourself !!</h6>
+                </div>
+                <form [formGroup]="signupForm">
+                    <div class="mb-3">
+                        <label class="form-label font-weight-bold">Full Name</label>
+                        <input formControlName="fullname" type="text" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label font-weight-bold">Mobile Number</label>
+                        <input formControlName="mobile" type="text" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label font-weight-bold">Email Address</label>
+                        <input formControlName="email" type="text" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label font-weight-bold">Password</label>
+                        <input formControlName="password" type="password" class="form-control">
+                    </div>
+                    <button type="button" (click)="valueGet()" class="btn btn-primary mb-2" routerLink="/test">Sign
+                        Up</button>
+                </form>
+                <a style="color: #fff; margin-top: 10px;" routerLink="/login">Already Registered? Click to Login!!</a>
+            </div>
+        </div>
+    </div>
+</div>

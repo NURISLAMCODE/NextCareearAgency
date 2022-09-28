@@ -1,0 +1,23 @@
+{
+  "signupUsers": [
+    {
+      "fullname": "BaharKhan",
+      "email": "baharkhan870@gmail.com",
+      "password": "123456",
+      "mobile": "01580607344",
+      "dateTime": "2022-08-23T12:28:52.209Z",
+      "id": 1
+    }
+   
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

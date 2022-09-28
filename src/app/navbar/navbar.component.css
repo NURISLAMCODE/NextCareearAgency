@@ -1,0 +1,10 @@
+nav h1{
+    font-family: 'Dancing Script', cursive;
+    }
+   img{ 
+    width: 200px;
+   }
+.content{
+    border-bottom: rgba(20, 15, 33, -1.5);
+}
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
